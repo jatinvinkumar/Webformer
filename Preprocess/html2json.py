@@ -170,6 +170,7 @@ dir_path = './data/endata/'
 new_dir_path = './data/endata_new_clean/'
 output_path = './data/wiki_html_all.json'
 if __name__ == "__main__":
+    output_path.parent.mkdir(exist_ok=True, parents=True)
     with open(output_path,'w')as g:
         for root, dirs, files in os.walk(dir_path):
             for dir in tqdm(dirs):

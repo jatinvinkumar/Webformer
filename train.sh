@@ -1,4 +1,5 @@
-CUDA_VISIBLE_DEVICES=1 python ./run_mlm_pc.py \
+export PATH="$PYENV_ROOT/bin:$PATH"
+CUDA_VISIBLE_DEVICES=1 python3.9 ./run_mlm_pc.py \
 	--model_name_or_path bert-base-uncased \
 	--learning_rate 5e-5 \
 	--node_config_name ./bert_base_1layer \
@@ -13,4 +14,4 @@ CUDA_VISIBLE_DEVICES=1 python ./run_mlm_pc.py \
 	--dataset_cache_dir ./cache \
 	--limit 50000000 \
 	--overwrite_output_dir \
-	--tokenizer_name ./bert_base_uncased
+	--tokenizer_name ./bert-base-uncased
