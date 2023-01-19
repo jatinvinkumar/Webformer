@@ -70,8 +70,7 @@ def truncate_seq_pair(tokens_a, tokens_b, max_num_tokens):
 			break
 		# truncate from the doc side
 		tokens_b.pop()
-def construct_pointwise_data(examples,chunk_indexs,max_seq_len,bert_tokenizer,masked_lm_prob, max_predictions_per_seq,bert_vocab_list,epoch_filename,resps_list):
-	epoch_filename.parent.mkdir(exist_ok=True, parents=True) 
+def construct_pointwise_data(examples,chunk_indexs,max_seq_len,bert_tokenizer,masked_lm_prob, max_predictions_per_seq,bert_vocab_list,epoch_filename,resps_list): 
 	with open(epoch_filename,'w')as g:
 		num_examples = len(examples)
 		print("num_examples", num_examples)
@@ -540,7 +539,6 @@ if __name__ == "__main__":
 
 
 			metrics_file =  f"{args.output_dir}/epoch_{epoch}_metrics.json"
-			metrics_file.parent.mkdir(exist_ok=True, parents=True)
 			with open(metrics_file, 'w') as metrics_file:
 				metrics = {
 					"num_training_examples": num_instances.value,

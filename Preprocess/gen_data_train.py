@@ -341,7 +341,6 @@ if __name__ == "__main__":
             processors.join()
 
             metrics_file = f"{args.output_dir}/epoch_{epoch}_metrics.json"
-            metrics_file.parent.mkdir(exist_ok=True, parents=True)
             with open(metrics_file, 'w') as metrics_file:
                 metrics = {
                     "num_training_examples": num_instances.value,

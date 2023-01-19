@@ -13,6 +13,8 @@ First, prepare a **Python3** environment, and run the following commands:
   pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
+pip3 install torch --pre --extra-index-url https://download.pytorch.org/whl/nightly/cu116
+
 ### Prepare the Corpus Data
 Every piece of corpus data is the raw HTML code of a web page.
 Run the following commands to clear irrelevant content and get the training corpus:
