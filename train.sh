@@ -1,5 +1,5 @@
 export PATH="$PYENV_ROOT/bin:$PATH"
-CUDA_VISIBLE_DEVICES=1 python3.9 ./run_mlm_pc.py \
+CUDA_VISIBLE_DEVICES=1 python3 ./run_mlm_pc.py \
 	--model_name_or_path bert-base-uncased \
 	--learning_rate 5e-5 \
 	--node_config_name ./bert_base_1layer \

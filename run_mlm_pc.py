@@ -256,8 +256,8 @@ def main():
         #model = BertForMaskedLM(config=config)
         model = Webformer(node_config=node_config,text_config=text_config,layer_num=5)
       #  model = FraBert(config=config,num_type=3)
-    device = torch.device('cuda')
-    #device = torch.device('cpu')
+    #device = torch.device('cuda')
+    device = torch.device('cpu')
 
     model.to(device)
     model.resize_token_embeddings(len(tokenizer))
